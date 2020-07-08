@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hhero,
+.contentt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #051622;
+    color: #deb992;
+    text-align: center;
+    padding: 0 2rem;
+    width: 100vw;
+}
+.hhero img {
+    position: absolute;
+    top: 3vw;
+    left: 5vw;
+    width: 10vw;
+}
+.hhero h1 {
+    /* position: relative; */
+    font-family: "Raleway", sans-serif;
+    font-size: 10rem;
+    margin: 5% 0 0 0;
+    line-height: normal;
+    letter-spacing: 1rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.contentt h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 1rem;
+    font-weight: 200;
+}
+.hhero h3,
+.contentt h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+
+.navb {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 0 30px #488ab6f3;
+}
+
+/* agar navb aur top saath lagana ho */
+
+.top {
+    position: fixed;
+    top: 0;
+}
+
+.navItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    color: rgb(27, 160, 152);
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 1.4rem;
+}
+
+.navItem:hover {
+    color: white;
+    background: rgb(27, 160, 152);
+    transition: all 0.5s ease;
+}
+
+.slider {
+    position: absolute;
+    bottom: 0px;
+    width: 0vw;
+    height: 0.22rem;
+    /* background: #869ba9; */
+    background: rgba(36, 209, 221, 0.911);
+    transition: left 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .navb,
+    .contentt,
+    h1 {
+        font-size: 3rem;
+    }
+    .hhero h1 {
+        display: none;
+    }
+    .hhero img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+    }
+    .navb,
+    .contentt,
+    h3 {
+        font-size: 1rem;
+    }
+    .navItem {
+        font-size: 1rem;
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    resize: both;
+    overflow: auto;
+}
+
+.divider {
+    z-index: 8;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 0.2rem;
+    background-color: #deb992;
+    border-radius: 1px;
+    width: 80%;
+}
